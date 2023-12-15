@@ -96,7 +96,7 @@ class EHelperFunctions {
     return DateFormat(format).format(date);
   }
 
-  static List<T> removeDuplicates<T>(List<T> list) {
+  static List<E> removeDuplicates<E>(List<E> list) {
     return list.toSet().toList();
   }
 
