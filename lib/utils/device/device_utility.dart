@@ -62,7 +62,7 @@ class EDeviceUtils {
   }
 
   static Future<bool> isKeyboardVisible() async {
-    final viewInsets = View.of(Get.context!).viewInsets;
+    final viewInsets = View.of(Get.context!).viewInsets; 
     return viewInsets.bottom > 0;
   }
 
