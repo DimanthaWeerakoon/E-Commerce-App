@@ -1,12 +1,10 @@
+import 'package:e_commerce_app/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:e_commerce_app/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:e_commerce_app/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:e_commerce_app/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
-import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
-import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/texts.dart';
-import 'package:e_commerce_app/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -45,19 +43,14 @@ class OnBoardingScreen extends StatelessWidget {
           const OnBoardingSkip(),
 
           /// Dot Navigation SmoothPageIndicator
-          Positioned(
-              bottom: EDeviceUtils.getNavigationBarHieght() + 25,
-              left: ESizes.defaultSpace,
-              child: SmoothPageIndicator(
-                effect: const ExpandingDotsEffect(
-                    activeDotColor: EColors.dark, dotHeight: 6),
-                controller: PageController(),
-                count: 3,
-              )),
+          const OnboardDotNavigation(),
 
           /// Circular Button
+          const OnBoardingNextButton()
         ],
       ),
     );
   }
 }
+
+
