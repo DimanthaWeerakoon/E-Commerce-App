@@ -1,0 +1,14 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#111111"
+  image: assets/logos/DALPHA_Logo_Light.png
+  image_dark: assets/logos/DALPHA_Logo_Dark.png
+
+
+android_12:
+  color: "#FFFFFF"
+  color_dark: "#111111"
+  image: assets/logos/DALPHA_Logo_Light.png
+  image_dark: assets/logos/DALPHA_Logo_Dark.png
+
+web: false
