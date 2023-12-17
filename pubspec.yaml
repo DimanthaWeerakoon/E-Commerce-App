@@ -19,6 +19,8 @@ dependencies:
   logger:
   url_launcher:
   flutter_native_splash:
+  smooth_page_indicator: ^1.1.0
+
 
 # Icons
   iconsax: 
@@ -51,6 +53,7 @@ flutter:
     - assets/logos/
     - assets/icons/
     - assets/images/
+    - assets/images/on_boarding_images/
 
 
 
