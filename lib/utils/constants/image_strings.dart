@@ -1,8 +1,8 @@
 class EImages {
 
   // -- App Logos
-  static const String darkAppLogo = "assets/logos/DALPHA Logo Dark.png";
-  static const String lightAppLogo = "assets/logos/DALPHA Logo Light.png";
+  static const String darkAppLogo = "assets/logos/DALPHA_Logo_Dark.png";
+  static const String lightAppLogo = "assets/logos/DALPHA_Logo_Light.png";
 
 
   // -- Social Logos

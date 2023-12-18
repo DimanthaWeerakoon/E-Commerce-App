@@ -25,20 +25,20 @@ class OnBoardingScreen extends StatelessWidget {
             children: [
               OnBoardingPage(
                 txtTheme: txtTheme,
-                title: EText.onBoardingTitle1,
-                subTitle: EText.onBoardingTitlesub1,
+                title: ETexts.onBoardingTitle1,
+                subTitle: ETexts.onBoardingTitlesub1,
                 image: EImages.onboarding1,
               ),
               OnBoardingPage(
                 txtTheme: txtTheme,
-                title: EText.onBoardingTitle2,
-                subTitle: EText.onBoardingTitlesub2,
+                title: ETexts.onBoardingTitle2,
+                subTitle: ETexts.onBoardingTitlesub2,
                 image: EImages.onboarding2,
               ),
               OnBoardingPage(
                 txtTheme: txtTheme,
-                title: EText.onBoardingTitle3,
-                subTitle: EText.onBoardingTitlesub3,
+                title: ETexts.onBoardingTitle3,
+                subTitle: ETexts.onBoardingTitlesub3,
                 image: EImages.onboarding3,
               )
             ],
