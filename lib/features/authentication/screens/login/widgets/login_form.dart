@@ -1,6 +1,8 @@
+import 'package:e_commerce_app/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ELoginForm extends StatelessWidget {
@@ -28,7 +30,7 @@ class ELoginForm extends StatelessWidget {
             decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: ETexts.password,
-                suffixIcon: Icon(Iconsax.eye)),
+                suffixIcon: Icon(Iconsax.eye_slash)),
           ),
           const SizedBox(
             height: ESizes.spaceBtwInputField,
@@ -81,7 +83,7 @@ class ELoginForm extends StatelessWidget {
           SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const SignUpScreen()),
                   child: const Text(ETexts.createAccount)))
         ]),
       ),
