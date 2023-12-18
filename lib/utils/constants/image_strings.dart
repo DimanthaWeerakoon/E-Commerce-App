@@ -6,7 +6,7 @@ class EImages {
 
 
   // -- Social Logos
-  static const String google = "assets/logos/google_Logo.png";
+  static const String google = "assets/logos/google_logo.png";
   static const String facebook = "assets/logos/Facebook_Logo.png";
 
 

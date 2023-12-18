@@ -5,7 +5,7 @@ class ECheckBoxTheme {
 
   // Light Theme
   static CheckboxThemeData lightChechBoxTheme = CheckboxThemeData(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       checkColor: MaterialStateProperty.resolveWith((states) {
         if (states.contains(MaterialState.selected)) {
           return Colors.white;
@@ -23,7 +23,7 @@ class ECheckBoxTheme {
 
   // Dark Theme
   static CheckboxThemeData darkChechBoxTheme = CheckboxThemeData(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
       checkColor: MaterialStateProperty.resolveWith((states) {
         if (states.contains(MaterialState.selected)) {
           return Colors.white;
