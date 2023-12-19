@@ -1,19 +1,20 @@
 import 'package:e_commerce_app/utils/constants/colors.dart';
+import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class EFromDivider extends StatelessWidget {
   const EFromDivider({
     super.key,
-    required this.dark,
-    required this.txtTheme, required this.dividerText,
+    required this.txtTheme,
+    required this.dividerText,
   });
 
-  final bool dark;
   final TextTheme txtTheme;
   final String dividerText;
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -25,8 +26,7 @@ class EFromDivider extends StatelessWidget {
             endIndent: 5,
           ),
         ),
-        Text(dividerText,
-            style: txtTheme.labelMedium),
+        Text(dividerText, style: txtTheme.labelMedium),
         Flexible(
           child: Divider(
             color: dark ? EColors.darkerGrey : EColors.darkGrey,
