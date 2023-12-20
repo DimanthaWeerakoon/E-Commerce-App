@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/common/widgets/success_screen/success_sreen.dart';
 import 'package:e_commerce_app/features/authentication/screens/login/login.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
@@ -71,7 +72,7 @@ class VerifyEmailScreen extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(() => const SuccessScreen()),
                           child: const Text(ETexts.tContinue)),
                     ),
                     const SizedBox(
