@@ -1,10 +1,8 @@
 import 'package:e_commerce_app/common/widgets/login_signup/form_divider.dart';
 import 'package:e_commerce_app/common/widgets/login_signup/social_buttons.dart';
 import 'package:e_commerce_app/features/authentication/screens/signup/widgets/terms_and_conditions.dart';
-import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/constants/texts.dart';
-import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
