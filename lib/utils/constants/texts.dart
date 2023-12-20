@@ -37,6 +37,7 @@ class ETexts {
   static const String resendEmail = "Resend E-Mail";
   static const String resendEmailIn = "Resend E-Mail in";
   static const String tContinue = "Continue";
+  static const String submit = "Submit";
 
 
   // -- Authentication Headings Texts
