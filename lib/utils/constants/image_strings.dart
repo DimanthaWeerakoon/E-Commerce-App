@@ -19,4 +19,5 @@ class EImages {
   // -- Verify Email Screen
   static const String verifyEmail1 = "assets/images/verify_email_images/verify_email_1.png";
   static const String verifyEmail2 = "assets/images/verify_email_images/verify_email_2.png";
+  static const String resetPassword = "assets/images/verify_email_images/reset_password.png";
 }
