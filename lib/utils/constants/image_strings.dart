@@ -14,4 +14,9 @@ class EImages {
   static const String onboarding2 = "assets/images/on_boarding_images/on_board_1.gif";
   static const String onboarding1 = "assets/images/on_boarding_images/on_board_2.gif";
   static const String onboarding3 = "assets/images/on_boarding_images/on_board_3.gif";
+
+
+  // -- Verify Email Screen
+  static const String verifyEmail1 = "assets/images/verify_email_images/verify_email_1.png";
+  static const String verifyEmail2 = "assets/images/verify_email_images/verify_email_2.png";
 }

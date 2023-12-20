@@ -54,6 +54,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/images/on_boarding_images/
+    - assets/images/verify_email_images/
 
 
 
