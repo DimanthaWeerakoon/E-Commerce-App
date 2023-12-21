@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/common/widgets/success_screen/success_sreen.dart';
 import 'package:e_commerce_app/features/authentication/screens/login/login.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
