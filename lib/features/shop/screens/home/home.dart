@@ -14,8 +14,15 @@ class HomeScreen extends StatelessWidget {
             Container(
                 color: EColors.primary,
                 padding: const EdgeInsets.all(0),
-                child: const Stack(
-                  children: [ECircularContainer()],
+                child:  SizedBox(
+                  height: 400,
+                  child: Stack(
+                    children: [
+                      Positioned(top: -150, right: -250, child: ECircularContainer(backgroundColor: EColors.white.withOpacity(0.1),)),
+                      Positioned(top: 100, right: -300, child: ECircularContainer(backgroundColor: EColors.white.withOpacity(0.1),)),
+                      
+                      ],
+                  ),
                 ))
           ],
         ),
