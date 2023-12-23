@@ -11,11 +11,12 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             EPrimaryHeaderContainer(
-              child: Container()
-            ),
+              child: Container(),
+            )
           ],
         ),
-      ), 
+      ),
     );
   }
 }
+
