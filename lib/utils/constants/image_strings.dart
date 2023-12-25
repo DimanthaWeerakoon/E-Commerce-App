@@ -32,4 +32,10 @@ class EImages {
   static const String animalIcon = "assets/icons/categories/icons8-cat-64.png";
   static const String shoeIcon = "assets/icons/categories/icons8-shoe-64.png";
   static const String cosmeticshoeIcon = "assets/icons/categories/icons8-lipstick-64.png";
+
+
+  // -- Banner images
+  static const String promoBanner1 = "assets/images/banners/banner_1.png";
+  static const String promoBanner2 = "assets/images/banners/banner_2.png";
+  static const String promoBanner3 = "assets/images/banners/banner_3.png";
 }

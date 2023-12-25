@@ -29,6 +29,7 @@ dependencies:
 # State Management
   get: 
   get_storage:
+  carousel_slider: ^4.2.1
 
 
 # Product Specific
@@ -53,6 +54,7 @@ flutter:
     - assets/logos/
     - assets/icons/
     - assets/images/
+    - assets/images/banners/
     - assets/images/on_boarding_images/
     - assets/images/verify_email_images/
     - assets/icons/categories/
