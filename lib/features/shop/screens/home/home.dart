@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:e_commerce_app/common/widgets/image_text_widgets/vertical_image_text.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
@@ -79,65 +80,4 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class EVerticalImageText extends StatelessWidget {
-  const EVerticalImageText({
-    super.key,
-    required this.image,
-    required this.title,
-    this.textColor = EColors.white,
-    this.backgroundColor,
-    this.onTap,
-  });
 
-  final String image, title;
-  final Color textColor;
-  final Color? backgroundColor;
-  final void Function()? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final dark = EHelperFunctions.isDarkMode(context);
-
-    return GestureDetector(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.only(right: ESizes.spaceBtwItems),
-        child: Column(
-          children: [
-            Container(
-                width: 56,
-                height: 56,
-                padding: const EdgeInsets.all(ESizes.sm),
-                decoration: BoxDecoration(
-                    color: backgroundColor ??
-                        (dark ? EColors.black : EColors.white),
-                    borderRadius: BorderRadius.circular(100)),
-                child: Center(
-                    child: Image(
-                  image: AssetImage(image),
-                  fit: BoxFit.scaleDown,
-                  color: dark ? EColors.light : EColors.dark,
-                ))),
-
-            /// Text
-            const SizedBox(
-              height: ESizes.spaceBtwItems / 2,
-            ),
-            SizedBox(
-                width: 55,
-                child: Text(
-                  title,
-                  style: Theme.of(context)
-                      .textTheme
-                      .labelMedium!
-                      .apply(color: textColor),
-                  textAlign: TextAlign.center,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ))
-          ],
-        ),
-      ),
-    );
-  }
-}
