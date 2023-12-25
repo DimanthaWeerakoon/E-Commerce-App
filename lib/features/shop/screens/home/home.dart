@@ -85,7 +85,7 @@ class EVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = EColors.white,
-    this.backgroundColor = EColors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -96,6 +96,8 @@ class EVerticalImageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
+
     return GestureDetector(
       onTap: onTap,
       child: Padding(
@@ -107,13 +109,14 @@ class EVerticalImageText extends StatelessWidget {
                 height: 56,
                 padding: const EdgeInsets.all(ESizes.sm),
                 decoration: BoxDecoration(
-                    color: backgroundColor ?? (EHelperFunctions.isDarkMode(context) ? EColors.black : EColors.white),
+                    color: backgroundColor ??
+                        (dark ? EColors.black : EColors.white),
                     borderRadius: BorderRadius.circular(100)),
                 child: Center(
                     child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.scaleDown,
-                  color: EColors.dark,
+                  color: dark ? EColors.light : EColors.dark,
                 ))),
 
             /// Text
@@ -128,7 +131,7 @@ class EVerticalImageText extends StatelessWidget {
                       .textTheme
                       .labelMedium!
                       .apply(color: textColor),
-                   textAlign: TextAlign.center,   
+                  textAlign: TextAlign.center,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ))
