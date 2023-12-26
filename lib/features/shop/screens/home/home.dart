@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
@@ -14,12 +15,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header --
-            EPrimaryHeaderContainer(
+            const EPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// -- AppBar
@@ -62,8 +63,14 @@ class HomeScreen extends StatelessWidget {
 
             /// Body
             Padding(
-              padding: EdgeInsets.all(ESizes.defaultSpace),
-              child: ERoundedImage(imageURL: EImages.promoBanner1,),
+              padding: const EdgeInsets.all(ESizes.defaultSpace),
+              child: CarouselSlider(
+                options: CarouselOptions(viewportFraction: 1),
+                items: const [
+                  ERoundedImage(imageURL: EImages.promoBanner1,),
+                  ERoundedImage(imageURL: EImages.promoBanner2,),
+                  ERoundedImage(imageURL: EImages.promoBanner3,),
+                ]),
             )
           ],
         ),
