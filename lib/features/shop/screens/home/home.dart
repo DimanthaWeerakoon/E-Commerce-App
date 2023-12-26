@@ -5,6 +5,7 @@ import 'package:e_commerce_app/features/shop/screens/home/widgets/home_appbar.da
 import 'package:e_commerce_app/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_commerce_app/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
+import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -62,7 +63,11 @@ class HomeScreen extends StatelessWidget {
             /// Body
             Padding(
               padding: EdgeInsets.all(ESizes.defaultSpace),
-              child: EPromoSlider(),
+              child: EPromoSlider(banners: [
+                EImages.promoBanner1,
+                EImages.promoBanner2,
+                EImages.promoBanner3,
+              ]),
             )
           ],
         ),
@@ -70,4 +75,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
