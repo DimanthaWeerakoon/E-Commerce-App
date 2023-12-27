@@ -38,4 +38,31 @@ class EImages {
   static const String promoBanner1 = "assets/images/banners/banner_1.png";
   static const String promoBanner2 = "assets/images/banners/banner_2.jpg";
   static const String promoBanner3 = "assets/images/banners/banner_3.png";
+
+  // -- Products
+  static const String productItem1 = "assets/images/products/Shoe_1.png";
+  static const String productItem2 = "assets/images/products/Shoe_2.png";
+  static const String productItem3 = "assets/images/products/Shoe_3.png";
+  static const String productItem4 = "assets/images/products/Shoe_4.png";
+  static const String productItem5 = "assets/images/products/Shoe_5.png";
+  static const String productItem6 = "assets/images/products/Shoe_6.png";
+  static const String productItem7 = "assets/images/products/Shoe_7.png";
+  static const String productItem8 = "assets/images/products/Shoe_8.png";
+  static const String productItem9 = "assets/images/products/Shoe_9.png";
+  static const String productItem10 = "assets/images/products/Shoe_10.png";
+  static const String productItem11 = "assets/images/products/Shoe_11.png";
+  
+  static const String productItem12 = "assets/images/products/Tshirt_all.png";
+  static const String productItem13 = "assets/images/products/Tshirt_black.png";
+  static const String productItem14 = "assets/images/products/Tshirt_brown.png";
+  static const String productItem15 = "assets/images/products/Tshirt_darkBlue.png";
+  static const String productItem16 = "assets/images/products/Tshirt_green.png";
+  static const String productItem17 = "assets/images/products/Tshirt_grey.png";
+  static const String productItem18 = "assets/images/products/Tshirt_lightBlue.png";
+  static const String productItem19 = "assets/images/products/Tshirt_lightGreen.png";
+  static const String productItem20 = "assets/images/products/Tshirt_orange.png";
+  static const String productItem21 = "assets/images/products/Tshirt_pink.png";
+  static const String productItem22 = "assets/images/products/Tshirt_red.png";
+  static const String productItem23 = "assets/images/products/Tshirt_white.png";
+  static const String productItem24 = "assets/images/products/Tshirt_yellow.png";
 }
