@@ -2,6 +2,7 @@ import 'package:e_commerce_app/common/styles/shadows.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/icons/circular_icon.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
@@ -20,7 +21,8 @@ class EProductCardVertical extends StatelessWidget {
       decoration: BoxDecoration(
           boxShadow: [EShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(ESizes.productImageRadius),
-          color: dark ? EColors.darkerGrey : EColors.white),
+          color: dark ? EColors.darkerGrey : EColors.white
+          ),
       child: Column(
         children: [
           /// Thumbnail, Wishlist button, Discount tag
@@ -54,17 +56,26 @@ class EProductCardVertical extends StatelessWidget {
 
                   // -- Favourite Icon Button
                   const Positioned(
-                    top: 0,
-                    right: 0, 
-                    child: ECircularIcon(icon: Iconsax.heart5, color: Colors.red,))
+                      top: 0,
+                      right: 0,
+                      child: ECircularIcon(
+                        icon: Iconsax.heart5,
+                        color: Colors.red,
+                      ))
                 ],
-              ))
+              )),
 
           ///  Details
+          const Padding(
+            padding: EdgeInsets.only(left: ESizes.sm),
+            child: Column(
+              children: [
+                EProductTitleText(title: 'Blue Nike Shoe')
+              ],
+            ),
+          )
         ],
       ),
     );
   }
 }
-
-
