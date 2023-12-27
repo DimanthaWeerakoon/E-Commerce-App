@@ -72,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                     EImages.promoBanner2,
                     EImages.promoBanner3,
                   ]),
-                  const SizedBox(height: ESizes.spaceBtwSections),
+                  SizedBox(height: ESizes.spaceBtwSections),
                   /// Popular Products
                   
                   EProductCardVertical() 

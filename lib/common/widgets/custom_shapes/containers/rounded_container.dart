@@ -10,18 +10,21 @@ class ERoundedContainer extends StatelessWidget {
     this.height,
     this.marging,
     this.padding,
-    this.showBoader = false,
+    this.showBorder = false,
     this.radius = ESizes.cardRadiusLg,
-    this.borderColor = EColors.white,
-    this.backgroundColor = EColors.primary,
+    this.backgroundColor = EColors.white,
+    this.borderColor = EColors.borderPrimary,
   });
 
-  final double? width, height;
+  final double? width;
+  final double? height;
   final double radius;
   final Widget? child;
-  final bool showBoader;
-  final Color borderColor, backgroundColor;
-  final EdgeInsetsGeometry? padding, marging;
+  final bool showBorder;
+  final Color borderColor;
+  final Color backgroundColor;
+  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? marging;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +36,8 @@ class ERoundedContainer extends StatelessWidget {
       decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(radius),
-          border: showBoader ? Border.all(color: borderColor) : null),
+          border: showBorder ? Border.all(color: borderColor) : null),
+      child: child,    
     );
   }
 }
