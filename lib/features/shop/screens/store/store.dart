@@ -2,6 +2,7 @@ import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:e_commerce_app/common/widgets/images/circular_image.dart';
+import 'package:e_commerce_app/common/widgets/layouts/grid_layout.dart';
 import 'package:e_commerce_app/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:e_commerce_app/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
@@ -66,7 +67,8 @@ class StoreScreen extends StatelessWidget {
                             height: ESizes.spaceBtwItems / 1.5,
                           ),
 
-                          GestureDetector(
+                          EGridLayout(itemCount: 4, mainAxisExtent: 80, itemBuilder: (_, index) {
+                            return GestureDetector(
                             onTap: () {},
                             child: ERoundedContainer(
                               padding: const EdgeInsets.all(ESizes.sm),
@@ -74,28 +76,35 @@ class StoreScreen extends StatelessWidget {
                               backgroundColor: Colors.transparent,
                               child: Row(children: [
                                 // -- Icon
-                                ECircularImage(
-                                  image: EImages.electronicIcon,
-                                  isNetworkImage: false,
-                                  backgroundColor: Colors.transparent,
-                                  overlayColor: dark? EColors.white : EColors.black,
+                                Flexible(
+                                  child: ECircularImage(
+                                    image: EImages.electronicIcon,
+                                    isNetworkImage: false,
+                                    backgroundColor: Colors.transparent,
+                                    overlayColor: dark? EColors.white : EColors.black,
+                                  ),
                                 ),
                                 const SizedBox(width: ESizes.spaceBtwItems / 2,),
                                 // -- Text
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const EBrabdTitleTextWithVerifiedIcon(title: 'Nike', brandTextsize: TextSizes.large,),
-                                    Text(
-                                      '256 Products',
-                                      style: Theme.of(context).textTheme.labelMedium,
-                                      )
-                          
-                                  ],
+                                Expanded(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const EBrabdTitleTextWithVerifiedIcon(title: 'Nike', brandTextsize: TextSizes.large,),
+                                      Text(
+                                        '256 Products',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: Theme.of(context).textTheme.labelMedium,
+                                        )
+                                                          
+                                    ],
+                                  ),
                                 )
                               ]),
                             ),
-                          )
+                          );
+                          })
                         ],
                       )),
                 )
