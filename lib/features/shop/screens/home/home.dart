@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:e_commerce_app/common/widgets/layouts/grid_layout.dart';
 import 'package:e_commerce_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce_app/features/shop/screens/home/widgets/home_appbar.dart';
@@ -75,15 +76,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: ESizes.spaceBtwSections),
 
                   /// Popular Products
-                  GridView.builder(
-                    itemCount: 4,
-                    shrinkWrap: true,
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: ESizes.gridViewSpacing,
-                          crossAxisSpacing: ESizes.gridViewSpacing,
-                          mainAxisExtent: 288),
-                      itemBuilder: (_, index) => const EProductCardVertical()),
+                  EGridLayout(itemCount: 5, itemBuilder: (_, index) => const EProductCardVertical(),),
                   // const EProductCardVertical()
                 ],
               ),
@@ -94,3 +87,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
