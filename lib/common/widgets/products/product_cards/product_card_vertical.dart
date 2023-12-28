@@ -2,6 +2,7 @@ import 'package:e_commerce_app/common/styles/shadows.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/icons/circular_icon.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce_app/common/widgets/texts/product_price_text.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
@@ -54,7 +55,7 @@ class EProductCardVertical extends StatelessWidget {
                             .apply(color: EColors.black),
                       ),
                     ),
-    
+
                     // -- Favourite Icon Button
                     const Positioned(
                         top: 0,
@@ -68,7 +69,7 @@ class EProductCardVertical extends StatelessWidget {
             const SizedBox(
               height: ESizes.spaceBtwItems / 2,
             ),
-    
+
             ///  Details
             Padding(
               padding: const EdgeInsets.only(left: ESizes.sm),
@@ -97,25 +98,20 @@ class EProductCardVertical extends StatelessWidget {
                       )
                     ],
                   ),
-    
+
                   // const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       /// Price
-                      Text(
-                        '\$45.00',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
+                      const EProductPriceText(price: '42.00', isLarge: true,),
                       Container(
                         decoration: const BoxDecoration(
                             color: EColors.dark,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(ESizes.cardRadiusMd),
-                                bottomLeft:
-                                    Radius.circular(ESizes.productImageRadius))),
+                                bottomLeft: Radius.circular(
+                                    ESizes.productImageRadius))),
                         child: const SizedBox(
                             width: ESizes.iconLg * 1.2,
                             height: ESizes.iconLg * 1.2,
@@ -136,3 +132,5 @@ class EProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
