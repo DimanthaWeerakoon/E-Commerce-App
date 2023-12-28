@@ -13,7 +13,7 @@ class ERoundedImage extends StatelessWidget {
     this.applyImageRadius = true,
     required this.imageURL,
     this.fit = BoxFit.contain,
-    this.backgroundColor = EColors.light,
+    this.backgroundColor,
     this.isNetworkImage = false,
     this.borderRadius = ESizes.md,
   });
@@ -22,7 +22,7 @@ class ERoundedImage extends StatelessWidget {
   final double? width, height;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;

@@ -99,12 +99,20 @@ class EProductCardVertical extends StatelessWidget {
                     ],
                   ),
 
-                  // const Spacer(),
+                  
+                ],
+              ),
+            ), 
+            const Spacer(),
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       /// Price
-                      const EProductPriceText(price: '42.00', isLarge: true,),
+                      const Padding(
+                        padding: EdgeInsets.only(left: ESizes.sm),
+                        child: EProductPriceText(price: '42.00', isLarge: true,),
+                      ),
                       Container(
                         decoration: const BoxDecoration(
                             color: EColors.dark,
@@ -123,9 +131,6 @@ class EProductCardVertical extends StatelessWidget {
                       )
                     ],
                   )
-                ],
-              ),
-            )
           ],
         ),
       ),
