@@ -70,7 +70,7 @@ class StoreScreen extends StatelessWidget {
                             backgroundColor: Colors.transparent,
                             child: Row(children: [
                               // -- Icon
-                            ECircularImage(dark: dark)
+                            // ECircularImage(dark: dark)
                             ]),
                           )
                         ],
