@@ -15,12 +15,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header --
-            EPrimaryHeaderContainer(
+            const EPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// -- AppBar
@@ -63,19 +63,28 @@ class HomeScreen extends StatelessWidget {
 
             /// Body
             Padding(
-              padding: EdgeInsets.all(ESizes.defaultSpace),
+              padding: const EdgeInsets.all(ESizes.defaultSpace),
               child: Column(
                 children: [
                   /// Promo Slider
-                  EPromoSlider(banners: [
+                  const EPromoSlider(banners: [
                     EImages.promoBanner1,
                     EImages.promoBanner2,
                     EImages.promoBanner3,
                   ]),
-                  SizedBox(height: ESizes.spaceBtwSections),
+                  const SizedBox(height: ESizes.spaceBtwSections),
+
                   /// Popular Products
-                  
-                  EProductCardVertical() 
+                  GridView.builder(
+                    itemCount: 4,
+                    shrinkWrap: true,
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: ESizes.gridViewSpacing,
+                          crossAxisSpacing: ESizes.gridViewSpacing,
+                          mainAxisExtent: 288),
+                      itemBuilder: (_, index) => const EProductCardVertical()),
+                  // const EProductCardVertical()
                 ],
               ),
             )
