@@ -2,6 +2,7 @@ import 'package:e_commerce_app/common/styles/shadows.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/icons/circular_icon.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
+import 'package:e_commerce_app/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_price_text.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
@@ -71,16 +72,16 @@ class EProductCardVertical extends StatelessWidget {
             ),
 
             ///  Details
-            Padding(
-              padding: const EdgeInsets.only(left: ESizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: ESizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const EProductTitleText(title: 'Blue Nike Shoe'),
-                  const SizedBox(
+                  EProductTitleText(title: 'Blue Nike Shoe'),
+                  SizedBox(
                     height: ESizes.spaceBtwItems / 2,
                   ),
-                  EBrabdTitleTextWithVerifiedIcon(),
+                  EBrabdTitleTextWithVerifiedIcon(title: 'Nike',),
 
                   
                 ],
