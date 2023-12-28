@@ -1,11 +1,11 @@
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
+import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class ECircularImage extends StatelessWidget {
   const ECircularImage({
     super.key,
-    required this.dark,
     this.fit = BoxFit.cover,
     required this.image,
     this.isNetworkImage = false,
@@ -16,7 +16,7 @@ class ECircularImage extends StatelessWidget {
     this.padding = ESizes.sm,
   });
 
-  final bool dark;
+
   final BoxFit? fit;
   final String image;
   final bool isNetworkImage;
@@ -26,6 +26,7 @@ class ECircularImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,
