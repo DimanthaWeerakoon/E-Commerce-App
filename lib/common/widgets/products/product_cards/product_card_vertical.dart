@@ -80,24 +80,7 @@ class EProductCardVertical extends StatelessWidget {
                   const SizedBox(
                     height: ESizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: ESizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: EColors.primary,
-                        size: ESizes.iconXs,
-                      )
-                    ],
-                  ),
+                  EBrabdTitleTextWithVerifiedIcon(),
 
                   
                 ],
@@ -137,5 +120,7 @@ class EProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
 
 

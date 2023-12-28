@@ -75,6 +75,13 @@ class StoreScreen extends StatelessWidget {
                                 isNetworkImage: false,
                                 backgroundColor: Colors.transparent,
                                 overlayColor: dark? EColors.white : EColors.black,
+                              ),
+                              const SizedBox(width: ESizes.spaceBtwItems / 2,),
+                              // -- Text
+                              Column(
+                                children: [
+
+                                ],
                               )
                             ]),
                           )
