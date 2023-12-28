@@ -66,32 +66,35 @@ class StoreScreen extends StatelessWidget {
                             height: ESizes.spaceBtwItems / 1.5,
                           ),
 
-                          ERoundedContainer(
-                            padding: const EdgeInsets.all(ESizes.sm),
-                            showBorder: true,
-                            backgroundColor: Colors.transparent,
-                            child: Row(children: [
-                              // -- Icon
-                              ECircularImage(
-                                image: EImages.electronicIcon,
-                                isNetworkImage: false,
-                                backgroundColor: Colors.transparent,
-                                overlayColor: dark? EColors.white : EColors.black,
-                              ),
-                              const SizedBox(width: ESizes.spaceBtwItems / 2,),
-                              // -- Text
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const EBrabdTitleTextWithVerifiedIcon(title: 'Nike', brandTextsize: TextSizes.large,),
-                                  Text(
-                                    '256 Products',
-                                    style: Theme.of(context).textTheme.labelMedium,
-                                    )
-
-                                ],
-                              )
-                            ]),
+                          GestureDetector(
+                            onTap: () {},
+                            child: ERoundedContainer(
+                              padding: const EdgeInsets.all(ESizes.sm),
+                              showBorder: true,
+                              backgroundColor: Colors.transparent,
+                              child: Row(children: [
+                                // -- Icon
+                                ECircularImage(
+                                  image: EImages.electronicIcon,
+                                  isNetworkImage: false,
+                                  backgroundColor: Colors.transparent,
+                                  overlayColor: dark? EColors.white : EColors.black,
+                                ),
+                                const SizedBox(width: ESizes.spaceBtwItems / 2,),
+                                // -- Text
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const EBrabdTitleTextWithVerifiedIcon(title: 'Nike', brandTextsize: TextSizes.large,),
+                                    Text(
+                                      '256 Products',
+                                      style: Theme.of(context).textTheme.labelMedium,
+                                      )
+                          
+                                  ],
+                                )
+                              ]),
+                            ),
                           )
                         ],
                       )),
