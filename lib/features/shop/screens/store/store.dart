@@ -109,17 +109,7 @@ class StoreScreen extends StatelessWidget {
               // -- Body
               body: const TabBarView(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.all(ESizes.defaultSpace),
-                    child: Column(
-                      children: [
-                        // -- Brands
-                        EBrandShowcase(images: [EImages.productItem2, EImages.productItem5, EImages.productItem4],),
-
-                        // -- Products
-                      ],
-                    ),
-                  )
+                  
                 ],
               ))),
     );
