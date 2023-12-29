@@ -19,97 +19,126 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
-    return Scaffold(
-        appBar: EAppbar(
-          title: Text(
-            'Store',
-            style: Theme.of(context).textTheme.headlineMedium,
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+          appBar: EAppbar(
+            title: Text(
+              'Store',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            actions: [
+              ECartCounterItem(
+                  iconColor: dark ? EColors.white : EColors.black,
+                  onPressed: () {})
+            ],
           ),
-          actions: [
-            ECartCounterItem(
-                iconColor: dark ? EColors.white : EColors.black,
-                onPressed: () {})
-          ],
-        ),
-        body: NestedScrollView(
-            headerSliverBuilder: (_, innerBoxIsScrolled) {
-              return [
-                SliverAppBar(
-                  pinned: true,
-                  floating: true,
-                  automaticallyImplyLeading: false,
-                  backgroundColor: dark ? EColors.black : EColors.white,
-                  expandedHeight: 440,
-                  flexibleSpace: Padding(
-                      padding: const EdgeInsets.all(ESizes.defaultSpace),
-                      child: ListView(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        children: [
-                          // -- Search Bar
-                          const SizedBox(
-                            height: ESizes.spaceBtwItems,
-                          ),
-                          const ESearchContainer(
-                            text: 'Search in Store',
-                            showBorder: true,
-                            showBackground: false,
-                            padding: EdgeInsets.zero,
-                          ),
-                          const SizedBox(
-                            height: ESizes.spaceBtwSections,
-                          ),
-
-                          // -- Featured Brands
-                          ESectionHeading(
-                              title: 'Featured Brands', onPressed: () {}),
-                          const SizedBox(
-                            height: ESizes.spaceBtwItems / 1.5,
-                          ),
-
-                          EGridLayout(itemCount: 4, mainAxisExtent: 80, itemBuilder: (_, index) {
-                            return GestureDetector(
-                            onTap: () {},
-                            child: ERoundedContainer(
-                              padding: const EdgeInsets.all(ESizes.sm),
-                              showBorder: true,
-                              backgroundColor: Colors.transparent,
-                              child: Row(children: [
-                                // -- Icon
-                                Flexible(
-                                  child: ECircularImage(
-                                    image: EImages.electronicIcon,
-                                    isNetworkImage: false,
-                                    backgroundColor: Colors.transparent,
-                                    overlayColor: dark? EColors.white : EColors.black,
-                                  ),
-                                ),
-                                const SizedBox(width: ESizes.spaceBtwItems / 2,),
-                                // -- Text
-                                Expanded(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      const EBrabdTitleTextWithVerifiedIcon(title: 'Nike', brandTextsize: TextSizes.large,),
-                                      Text(
-                                        '256 Products',
-                                        overflow: TextOverflow.ellipsis,
-                                        style: Theme.of(context).textTheme.labelMedium,
-                                        )
-                                                          
-                                    ],
-                                  ),
-                                )
-                              ]),
+          body: NestedScrollView(
+              headerSliverBuilder: (_, innerBoxIsScrolled) {
+                return [
+                  SliverAppBar(
+                    pinned: true,
+                    floating: true,
+                    automaticallyImplyLeading: false,
+                    backgroundColor: dark ? EColors.black : EColors.white,
+                    expandedHeight: 440,
+                    flexibleSpace: Padding(
+                        padding: const EdgeInsets.all(ESizes.defaultSpace),
+                        child: ListView(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          children: [
+                            // -- Search Bar
+                            const SizedBox(
+                              height: ESizes.spaceBtwItems,
                             ),
-                          );
-                          })
-                        ],
-                      )),
-                )
-              ];
-            },
-            body: Container()));
+                            const ESearchContainer(
+                              text: 'Search in Store',
+                              showBorder: true,
+                              showBackground: false,
+                              padding: EdgeInsets.zero,
+                            ),
+                            const SizedBox(
+                              height: ESizes.spaceBtwSections,
+                            ),
+    
+                            // -- Featured Brands
+                            ESectionHeading(
+                                title: 'Featured Brands', onPressed: () {}),
+                            const SizedBox(
+                              height: ESizes.spaceBtwItems / 1.5,
+                            ),
+    
+                            EGridLayout(
+                                itemCount: 4,
+                                mainAxisExtent: 80,
+                                itemBuilder: (_, index) {
+                                  return GestureDetector(
+                                    onTap: () {},
+                                    child: ERoundedContainer(
+                                      padding: const EdgeInsets.all(ESizes.sm),
+                                      showBorder: true,
+                                      backgroundColor: Colors.transparent,
+                                      child: Row(children: [
+                                        // -- Icon
+                                        Flexible(
+                                          child: ECircularImage(
+                                            image: EImages.electronicIcon,
+                                            isNetworkImage: false,
+                                            backgroundColor: Colors.transparent,
+                                            overlayColor: dark
+                                                ? EColors.white
+                                                : EColors.black,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: ESizes.spaceBtwItems / 2,
+                                        ),
+                                        // -- Text
+                                        Expanded(
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              const EBrabdTitleTextWithVerifiedIcon(
+                                                title: 'Nike',
+                                                brandTextsize: TextSizes.large,
+                                              ),
+                                              Text(
+                                                '256 Products',
+                                                overflow: TextOverflow.ellipsis,
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .labelMedium,
+                                              )
+                                            ],
+                                          ),
+                                        )
+                                      ]),
+                                    ),
+                                  );
+                                })
+                          ],
+                        )),
+                    // -- Tabs
+                    bottom: TabBar(
+                      isScrollable: true,
+                      indicatorColor: EColors.primary,
+                      labelColor: dark ? EColors.white : EColors.primary,
+                      
+                      tabs: const [
+                      Tab(child: Text('Sports'),),
+                      Tab(child: Text('Clothe'),),
+                      Tab(child: Text('Electronic'),),
+                      Tab(child: Text('Furniture'),),
+                      Tab(child: Text('Animal'),),
+                    ]),
+                  )
+                ];
+              },
+              // -- Body
+              body: Container())),
+    );
   }
 }
