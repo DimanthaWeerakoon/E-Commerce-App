@@ -8,10 +8,11 @@ import 'package:flutter/material.dart';
 class EBrandShowcase extends StatelessWidget {
   const EBrandShowcase({
     super.key,
-    required this.images,
+    required this.images, required this.title,
   });
 
   final List<String> images;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class EBrandShowcase extends StatelessWidget {
       child: Column(
         children: [
           /// Brands with product count
-          const EBrandCard(showBorder: false),
+          EBrandCard(showBorder: false, title: title),
 
           /// Brands with product count
           Row(

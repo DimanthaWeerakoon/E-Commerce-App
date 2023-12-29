@@ -10,12 +10,13 @@ import 'package:flutter/material.dart';
 
 class EBrandCard extends StatelessWidget {
   const EBrandCard({
-    super.key, required this.showBorder, this.onTap,
+    super.key, required this.showBorder, this.onTap, required this.title,
    
   });
 
   final bool showBorder;
   final void Function()? onTap; 
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +49,8 @@ class EBrandCard extends StatelessWidget {
               crossAxisAlignment:
                   CrossAxisAlignment.start,
               children: [
-                const EBrabdTitleTextWithVerifiedIcon(
-                  title: 'Nike',
+                EBrabdTitleTextWithVerifiedIcon(
+                  title: title,
                   brandTextsize: TextSizes.large,
                 ),
                 Text(

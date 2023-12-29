@@ -9,6 +9,7 @@ import 'package:e_commerce_app/common/widgets/layouts/grid_layout.dart';
 import 'package:e_commerce_app/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:e_commerce_app/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
+import 'package:e_commerce_app/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/enums.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
@@ -77,6 +78,7 @@ class StoreScreen extends StatelessWidget {
                                 mainAxisExtent: 80,
                                 itemBuilder: (_, index) {
                                   return const EBrandCard(
+                                    title: 'Nike',
                                     showBorder: true,
                                   );
                                 })
@@ -109,11 +111,14 @@ class StoreScreen extends StatelessWidget {
               // -- Body
               body: const TabBarView(
                 children: [
-                  
+                  ECategoryTab(),
+                  ECategoryTab(),
+                  ECategoryTab(),
+                  ECategoryTab(),
+                  ECategoryTab(),
+                  ECategoryTab(),
                 ],
               ))),
     );
   }
 }
-
-
