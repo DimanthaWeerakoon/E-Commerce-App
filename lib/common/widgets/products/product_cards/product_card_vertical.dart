@@ -14,6 +14,7 @@ import 'package:iconsax/iconsax.dart';
 
 class EProductCardVertical extends StatelessWidget {
   const EProductCardVertical({super.key});
+  
   @override
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
@@ -81,47 +82,46 @@ class EProductCardVertical extends StatelessWidget {
                   SizedBox(
                     height: ESizes.spaceBtwItems / 2,
                   ),
-                  EBrabdTitleTextWithVerifiedIcon(title: 'Nike',),
-
-                  
+                  EBrabdTitleTextWithVerifiedIcon(
+                    title: 'Nike',
+                  ),
                 ],
               ),
-            ), 
+            ),
             const Spacer(),
-                  
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// Price
-                      const Padding(
-                        padding: EdgeInsets.only(left: ESizes.sm),
-                        child: EProductPriceText(price: '42.00', isLarge: true,),
-                      ),
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: EColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(ESizes.cardRadiusMd),
-                                bottomLeft: Radius.circular(
-                                    ESizes.productImageRadius))),
-                        child: const SizedBox(
-                            width: ESizes.iconLg * 1.2,
-                            height: ESizes.iconLg * 1.2,
-                            child: Center(
-                                child: Icon(
-                              Iconsax.add,
-                              color: EColors.white,
-                            ))),
-                      )
-                    ],
-                  )
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// Price
+                const Padding(
+                  padding: EdgeInsets.only(left: ESizes.sm),
+                  child: EProductPriceText(
+                    price: '42.00',
+                    isLarge: true,
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: EColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(ESizes.cardRadiusMd),
+                          bottomLeft:
+                              Radius.circular(ESizes.productImageRadius))),
+                  child: const SizedBox(
+                      width: ESizes.iconLg * 1.2,
+                      height: ESizes.iconLg * 1.2,
+                      child: Center(
+                          child: Icon(
+                        Iconsax.add,
+                        color: EColors.white,
+                      ))),
+                )
+              ],
+            )
           ],
         ),
       ),
     );
   }
 }
-
-
-
-

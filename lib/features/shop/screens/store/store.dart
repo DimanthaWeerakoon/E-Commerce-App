@@ -1,4 +1,7 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
+import 'package:e_commerce_app/common/widgets/appbar/tabbar.dart';
+import 'package:e_commerce_app/common/widgets/brands/brand_card.dart';
+import 'package:e_commerce_app/common/widgets/brands/brand_showcase.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:e_commerce_app/common/widgets/images/circular_image.dart';
@@ -20,7 +23,7 @@ class StoreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
     return DefaultTabController(
-      length: 5,
+      length: 6,
       child: Scaffold(
           appBar: EAppbar(
             title: Text(
@@ -61,84 +64,66 @@ class StoreScreen extends StatelessWidget {
                             const SizedBox(
                               height: ESizes.spaceBtwSections,
                             ),
-    
+
                             // -- Featured Brands
                             ESectionHeading(
                                 title: 'Featured Brands', onPressed: () {}),
                             const SizedBox(
                               height: ESizes.spaceBtwItems / 1.5,
                             ),
-    
+
                             EGridLayout(
                                 itemCount: 4,
                                 mainAxisExtent: 80,
                                 itemBuilder: (_, index) {
-                                  return GestureDetector(
-                                    onTap: () {},
-                                    child: ERoundedContainer(
-                                      padding: const EdgeInsets.all(ESizes.sm),
-                                      showBorder: true,
-                                      backgroundColor: Colors.transparent,
-                                      child: Row(children: [
-                                        // -- Icon
-                                        Flexible(
-                                          child: ECircularImage(
-                                            image: EImages.electronicIcon,
-                                            isNetworkImage: false,
-                                            backgroundColor: Colors.transparent,
-                                            overlayColor: dark
-                                                ? EColors.white
-                                                : EColors.black,
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          width: ESizes.spaceBtwItems / 2,
-                                        ),
-                                        // -- Text
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.min,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              const EBrabdTitleTextWithVerifiedIcon(
-                                                title: 'Nike',
-                                                brandTextsize: TextSizes.large,
-                                              ),
-                                              Text(
-                                                '256 Products',
-                                                overflow: TextOverflow.ellipsis,
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .labelMedium,
-                                              )
-                                            ],
-                                          ),
-                                        )
-                                      ]),
-                                    ),
+                                  return const EBrandCard(
+                                    showBorder: true,
                                   );
                                 })
                           ],
                         )),
                     // -- Tabs
-                    bottom: TabBar(
-                      isScrollable: true,
-                      indicatorColor: EColors.primary,
-                      labelColor: dark ? EColors.white : EColors.primary,
-                      
-                      tabs: const [
-                      Tab(child: Text('Sports'),),
-                      Tab(child: Text('Clothe'),),
-                      Tab(child: Text('Electronic'),),
-                      Tab(child: Text('Furniture'),),
-                      Tab(child: Text('Animal'),),
+                    bottom: const ETabbar(tabs: [
+                      Tab(
+                        child: Text('Sports'),
+                      ),
+                      Tab(
+                        child: Text('Furniture'),
+                      ),
+                      Tab(
+                        child: Text('Electronics'),
+                      ),
+                      Tab(
+                        child: Text('Animal'),
+                      ),
+                      Tab(
+                        child: Text('Dress'),
+                      ),
+                      Tab(
+                        child: Text('Comsmetics'),
+                      ),
                     ]),
                   )
                 ];
               },
               // -- Body
-              body: Container())),
+              body: const TabBarView(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(ESizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        // -- Brands
+                        EBrandShowcase(images: [EImages.productItem2, EImages.productItem5, EImages.productItem4],),
+
+                        // -- Products
+                      ],
+                    ),
+                  )
+                ],
+              ))),
     );
   }
 }
+
+
