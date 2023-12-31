@@ -22,7 +22,7 @@ class Favouritescreen extends StatelessWidget {
         actions: [
           ECircularIcon(
             icon: Iconsax.add,
-            onPressed: () => Get.to(const HomeScreen()),
+            onPressed: () => Get.offAll  (const HomeScreen()),
           )
         ],
       ),

@@ -65,4 +65,7 @@ class EImages {
   static const String productItem22 = "assets/images/products/Tshirt_red.png";
   static const String productItem23 = "assets/images/products/Tshirt_white.png";
   static const String productItem24 = "assets/images/products/Tshirt_yellow.png";
+
+  // -- User
+  static const String userImage = "assets/images/user.png";
 }

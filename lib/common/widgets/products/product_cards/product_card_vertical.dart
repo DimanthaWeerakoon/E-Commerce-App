@@ -75,17 +75,20 @@ class EProductCardVertical extends StatelessWidget {
             ///  Details
             const Padding(
               padding: EdgeInsets.only(left: ESizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  EProductTitleText(title: 'Blue Nike Shoe'),
-                  SizedBox(
-                    height: ESizes.spaceBtwItems / 2,
-                  ),
-                  EBrabdTitleTextWithVerifiedIcon(
-                    title: 'Nike',
-                  ),
-                ],
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    EProductTitleText(title: 'Blue Nike Shoe', smallSize: true,),
+                    SizedBox(
+                      height: ESizes.spaceBtwItems / 2,
+                    ),
+                    EBrabdTitleTextWithVerifiedIcon(
+                      title: 'Nike',
+                    ),
+                  ],
+                ),
               ),
             ),
             const Spacer(),

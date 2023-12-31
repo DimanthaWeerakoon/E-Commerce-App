@@ -55,7 +55,10 @@ class HomeScreen extends StatelessWidget {
                           ),
 
                           /// -- Categories
-                          EHomeCategories()
+                          EHomeCategories(),
+                          SizedBox(
+                            height: ESizes.spaceBtwSections,
+                          ),
                         ],
                       ))
                 ],
@@ -80,7 +83,10 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: ESizes.spaceBtwSections),
 
                   /// Popular Products
-                  EGridLayout(itemCount: 6, itemBuilder: (_, index) => const EProductCardVertical(),),
+                  EGridLayout(
+                    itemCount: 6,
+                    itemBuilder: (_, index) => const EProductCardVertical(),
+                  ),
                   // const EProductCardVertical()
                 ],
               ),
@@ -91,5 +97,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
