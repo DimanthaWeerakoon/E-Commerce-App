@@ -2,6 +2,7 @@ import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:e_commerce_app/common/widgets/images/circular_image.dart';
 import 'package:e_commerce_app/common/widgets/list_tiles/user_profile_tile.dart';
+import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
@@ -42,13 +43,22 @@ class SettingsScreen extends StatelessWidget {
                   height: ESizes.spaceBtwSections,
                 ),
               ],
-            ))
+            )),
 
             // --  Body
+            const Padding(
+              padding: EdgeInsets.all(ESizes.defaultSpace),
+              child: Column(
+                children: [
+                  // -- Accoumt title
+                  ESectionHeading(title: 'Account Setting'),
+                  SizedBox(height: ESizes.spaceBtwItems,),
+                ],
+              ),
+              )
           ],
         ),
       ),
     );
   }
 }
-
