@@ -1,6 +1,5 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
-import 'package:e_commerce_app/common/widgets/images/circular_image.dart';
 import 'package:e_commerce_app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:e_commerce_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
@@ -141,6 +140,16 @@ class SettingsScreen extends StatelessWidget {
                     trailling: Switch(value: false, onChanged: (value) {}),
                     onPressed: () {},
                   ),
+
+                  // -- Logout Button
+                  const SizedBox(height: ESizes.spaceBtwSections,),
+
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(onPressed: () {}, child: const Text('Logout')),
+                  ),
+
+                  const SizedBox(height: ESizes.spaceBtwSections * 2.5,),
                 ],
               ),
             )
