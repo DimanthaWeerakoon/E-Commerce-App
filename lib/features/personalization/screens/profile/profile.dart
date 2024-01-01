@@ -58,15 +58,19 @@ class ProfileScreen extends StatelessWidget {
                 title: 'Username',
                 value: 'd_alpha',
                 onPressed: () {},
-              ), 
+              ),
               const Divider(),
-              const ESectionHeading(title: 'Personal Information', showActionButton: false,),
+              const ESectionHeading(
+                title: 'Personal Information',
+                showActionButton: false,
+              ),
               const SizedBox(
                 height: ESizes.spaceBtwItems,
               ),
               EProfileMenu(
                 title: 'User ID',
                 value: 'aplha0706',
+                icon: Iconsax.copy,
                 onPressed: () {},
               ),
               EProfileMenu(
@@ -89,7 +93,17 @@ class ProfileScreen extends StatelessWidget {
                 value: '7 Aug, 1997',
                 onPressed: () {},
               ),
-
+              const Divider(),
+              const SizedBox(
+                height: ESizes.spaceBtwItems,
+              ),
+              Center(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Close Account',
+                        style: TextStyle(color: Colors.red),
+                      )))
             ],
           ),
         ),
