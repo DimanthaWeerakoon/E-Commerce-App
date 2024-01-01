@@ -1,5 +1,8 @@
 import 'package:e_commerce_app/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
+import 'package:e_commerce_app/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class ProfileDetails extends StatelessWidget {
   const ProfileDetails({super.key});
@@ -14,10 +17,27 @@ class ProfileDetails extends StatelessWidget {
             EProductImageSlider(),
 
             /// 2 - Product Details
+            Padding(
+              padding: EdgeInsets.only(
+                  right: ESizes.defaultSpace,
+                  left: ESizes.defaultSpace,
+                  bottom: ESizes.defaultSpace),
+              child: Column(
+                children: [
+                  /// - Ratting & Share
+                  ERatingandShare()
+
+                  /// - Price, Title, Stock & Brand
+                  /// -- Attributes
+                  /// -- Checkout Button
+                  /// - Description
+                  /// - Reviews
+                ],
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
-
