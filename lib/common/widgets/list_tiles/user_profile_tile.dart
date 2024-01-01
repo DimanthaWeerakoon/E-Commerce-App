@@ -8,10 +8,11 @@ class EUserProfileTile extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    required this.subTitle,
+    required this.subTitle, this.onPressed,
   });
 
   final String image, title, subTitle;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,7 @@ class EUserProfileTile extends StatelessWidget {
             Theme.of(context).textTheme.bodyMedium!.apply(color: EColors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: const Icon(
           Iconsax.edit,
           color: EColors.white,
