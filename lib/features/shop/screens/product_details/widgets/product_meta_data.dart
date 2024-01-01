@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_price_text.dart';
+import 'package:e_commerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
@@ -33,16 +34,35 @@ class EProductMetaData extends StatelessWidget {
                     .apply(color: EColors.black),
               ),
             ),
-            const SizedBox(width: ESizes.spaceBtwItems,),
+            const SizedBox(
+              width: ESizes.spaceBtwItems,
+            ),
 
             // Price
-            Text('\$250', style: Theme.of(context).textTheme.titleSmall!.apply(decoration: TextDecoration.lineThrough),), 
-            const SizedBox(width: ESizes.spaceBtwItems,),
-            const EProductPriceText(price: '175', isLarge: true,) 
+            Text(
+              '\$250',
+              style: Theme.of(context)
+                  .textTheme
+                  .titleSmall!
+                  .apply(decoration: TextDecoration.lineThrough),
+            ),
+            const SizedBox(
+              width: ESizes.spaceBtwItems,
+            ),
+            const EProductPriceText(
+              price: '175',
+              isLarge: true,
+            )
           ],
-        )
+        ),
 
+        const SizedBox(
+          width: ESizes.spaceBtwItems / 1.5,
+        ),
         /// Title
+        const EProductTitleText(title: 'Blue Nike Sports Shoes')
+
+
         /// Stock Status
         /// Brand
       ],
