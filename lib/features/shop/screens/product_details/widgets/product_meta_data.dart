@@ -1,7 +1,11 @@
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:e_commerce_app/common/widgets/images/circular_image.dart';
+import 'package:e_commerce_app/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_price_text.dart';
 import 'package:e_commerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
+import 'package:e_commerce_app/utils/constants/enums.dart';
+import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -59,12 +63,46 @@ class EProductMetaData extends StatelessWidget {
         const SizedBox(
           width: ESizes.spaceBtwItems / 1.5,
         ),
-        /// Title
-        const EProductTitleText(title: 'Blue Nike Sports Shoes')
 
+        /// Title
+        const EProductTitleText(title: 'Blue Nike Sports Shoes'),
+        const SizedBox(
+          width: ESizes.spaceBtwItems / 1.5,
+        ),
 
         /// Stock Status
+        Row(
+          children: [
+            const EProductTitleText(title: 'Status'),
+            const SizedBox(
+              width: ESizes.spaceBtwItems / 1.5,
+            ),
+            Text(
+              'In Stock',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+          ],
+        ),
+
+        const SizedBox(
+          width: ESizes.spaceBtwItems / 1.5,
+        ),
+
         /// Brand
+        Row(
+          children: [
+            ECircularImage(
+              image: EImages.shoeIcon,
+              width: 32,
+              height: 32,
+              overlayColor: dark ? EColors.white : EColors.black,
+            ),
+            const EBrabdTitleTextWithVerifiedIcon(
+              title: 'Nike',
+              brandTextsize: TextSizes.medium,
+            ),
+          ],
+        )
       ],
     );
   }
