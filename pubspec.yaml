@@ -20,7 +20,7 @@ dependencies:
   url_launcher:
   flutter_native_splash:
   smooth_page_indicator: ^1.1.0
-  carousel_slider: ^4.2.1
+  
 
 
 # Icons
@@ -33,6 +33,8 @@ dependencies:
 
 
 # Product Specific
+  readmore: ^2.2.0
+  carousel_slider: ^4.2.1 
 
 
 

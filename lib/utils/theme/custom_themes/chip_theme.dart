@@ -10,6 +10,7 @@ class EChipTheme {
     selectedColor: Colors.blue,
     padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
     checkmarkColor: Colors.white,
+    
   );
   
   // Dark Theme

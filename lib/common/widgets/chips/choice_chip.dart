@@ -17,21 +17,25 @@ class EChoiceChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
     final isColor = EHelperFunctions.getColor(text) != null;
-    return ChoiceChip(
-      label: isColor
-          ? const SizedBox()
-          : Text(text),
-      selected: selected,
-      onSelected: onSelected,
-      labelStyle: const TextStyle(color: true ? EColors.white : null),
-      avatar: isColor
-        ? ECircularContainer(width: 50, height: 50, backgroundColor: EHelperFunctions.getColor(text)!,)
-        : null,
-      shape: isColor ? const CircleBorder() : null,
-      backgroundColor: isColor ? EHelperFunctions.getColor(text)! : null,
-      labelPadding: isColor ? const EdgeInsets.all(0) : null,
-      padding: isColor ? const EdgeInsets.all(0) : null,
+    return Theme(
+      data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+      child: ChoiceChip(
+        label: isColor
+            ? const SizedBox()
+            : Text(text),
+        selected: selected,
+        onSelected: onSelected,
+        labelStyle: TextStyle(color: true ? dark? EColors.white : EColors.black : null),
+        avatar: isColor
+          ? ECircularContainer(width: 50, height: 50, backgroundColor: EHelperFunctions.getColor(text)!,)
+          : null,
+        shape: isColor ? const CircleBorder() : null,
+        backgroundColor: isColor ? EHelperFunctions.getColor(text)! : null,
+        labelPadding: isColor ? const EdgeInsets.all(0) : null,
+        padding: isColor ? const EdgeInsets.all(0) : null,
+      ),
     );
   }
 }
