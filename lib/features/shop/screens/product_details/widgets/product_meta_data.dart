@@ -73,7 +73,7 @@ class EProductMetaData extends StatelessWidget {
         /// Stock Status
         Row(
           children: [
-            const EProductTitleText(title: 'Status'),
+            const EProductTitleText(title: 'Stock :', smallSize: true,),
             const SizedBox(
               width: ESizes.spaceBtwItems / 1.5,
             ),
@@ -92,9 +92,9 @@ class EProductMetaData extends StatelessWidget {
         Row(
           children: [
             ECircularImage(
-              image: EImages.shoeIcon,
-              width: 32,
-              height: 32,
+              image: EImages.nikeLogo,
+              width: 35,
+              height: 35,
               overlayColor: dark ? EColors.white : EColors.black,
             ),
             const EBrabdTitleTextWithVerifiedIcon(

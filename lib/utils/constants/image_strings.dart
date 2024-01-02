@@ -68,4 +68,8 @@ class EImages {
 
   // -- User
   static const String userImage = "assets/images/user.png";
+
+
+  // -- Brand Logos
+  static const String nikeLogo = "assets/logos/brands/nike_logo.png";
 }

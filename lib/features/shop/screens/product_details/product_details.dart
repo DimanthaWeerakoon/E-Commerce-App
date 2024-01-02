@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:e_commerce_app/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:e_commerce_app/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:e_commerce_app/features/shop/screens/product_details/widgets/rating_share_widget.dart';
@@ -29,12 +30,11 @@ class ProfileDetails extends StatelessWidget {
                   ERatingandShare(),
 
                   /// - Price, Title, Stock & Brand
-                  EProductMetaData()
-
-
-
+                  EProductMetaData(),
 
                   /// -- Attributes
+                  EProductAttributes()
+                  
                   /// -- Checkout Button
                   /// - Description
                   /// - Reviews
