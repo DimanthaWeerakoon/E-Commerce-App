@@ -11,31 +11,38 @@ class ProfileDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// 1 - Product Image Slider
-            EProductImageSlider(),
+            const EProductImageSlider(),
 
             /// 2 - Product Details
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   right: ESizes.defaultSpace,
                   left: ESizes.defaultSpace,
                   bottom: ESizes.defaultSpace),
               child: Column(
                 children: [
                   /// - Ratting & Share
-                  ERatingandShare(),
+                  const ERatingandShare(),
 
                   /// - Price, Title, Stock & Brand
-                  EProductMetaData(),
+                  const EProductMetaData(),
 
                   /// -- Attributes
-                  EProductAttributes()
-                  
+                  const EProductAttributes(),
+
+                  const SizedBox(height: ESizes.spaceBtwSections,),
+
                   /// -- Checkout Button
+                  SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          onPressed: () {}, child: Text('Checkout')))
+
                   /// - Description
                   /// - Reviews
                 ],
