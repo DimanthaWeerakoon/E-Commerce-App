@@ -18,6 +18,7 @@ class ProfileDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
     return Scaffold(
+      // backgroundColor: dark ? EColors.darkerGrey : EColors.white,
       bottomNavigationBar: const EBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
@@ -61,15 +62,19 @@ class ProfileDetails extends StatelessWidget {
                     title: 'Description',
                     showActionButton: false,
                   ),
-                  const SizedBox(height: ESizes.spaceBtwItems,),
+                  const SizedBox(
+                    height: ESizes.spaceBtwItems,
+                  ),
                   const ReadMoreText(
                     'Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning. The air compresses on impact and then immediately returns to its original shape and volume, ready for the next impact.',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: 'Show more',
                     trimExpandedText: ' Less',
-                    moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
-                    lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                    moreStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+                    lessStyle:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
                   ),
 
                   /// - Reviews
@@ -78,8 +83,19 @@ class ProfileDetails extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const ESectionHeading(title: 'Reviews(199)', showActionButton: false,),
-                      IconButton(onPressed: () {}, icon: Icon(Iconsax.arrow_right3, size: 18, color: dark ? EColors.white : EColors.black,))
+                      const Flexible(
+                        child: ESectionHeading(
+                          title: 'Reviews (199)',
+                          showActionButton: false,
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(
+                          Iconsax.arrow_right_3,
+                          size: 18,
+                        ),
+                        onPressed: () {},
+                      )
                     ],
                   ),
 

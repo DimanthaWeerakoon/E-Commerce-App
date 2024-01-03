@@ -20,7 +20,7 @@ class EProductImageSlider extends StatelessWidget {
   final dark = EHelperFunctions.isDarkMode(context);
     return ECuverdEdgeWidget(
         child: Container(
-      color: dark ? EColors.darkerGrey : EColors.light,
+      color: dark ? EColors.darkGrey : EColors.light,
       child: Stack(
         children: [
           /// Main Large Image
