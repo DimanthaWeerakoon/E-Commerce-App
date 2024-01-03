@@ -1,8 +1,10 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/products/cart/cart_menu_icon.dart';
+import 'package:e_commerce_app/features/shop/screens/cart/cart.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class EHomeAppBar extends StatelessWidget {
   const EHomeAppBar({
@@ -30,7 +32,7 @@ class EHomeAppBar extends StatelessWidget {
         actions: [
           ECartCounterItem(
             iconColor: EColors.white,
-            onPressed: () {},
+            onPressed: () => Get.to(const CartScreen()),
           )
         ]);
   }
