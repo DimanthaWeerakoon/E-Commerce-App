@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
+import 'package:e_commerce_app/features/shop/screens/checkout/checkout.dart';
 import 'package:e_commerce_app/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
 import 'package:e_commerce_app/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:e_commerce_app/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
@@ -52,7 +53,7 @@ class ProfileDetails extends StatelessWidget {
                   SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                          onPressed: () {}, child: const Text('Checkout'))),
+                          onPressed: () => Get.to(() => const CheckoutScreen()), child: const Text('Checkout'))),
 
                   const SizedBox(
                     height: ESizes.spaceBtwSections,
