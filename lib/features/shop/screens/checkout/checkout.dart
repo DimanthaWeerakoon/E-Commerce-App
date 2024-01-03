@@ -2,6 +2,7 @@ import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/products/cart/coupun_widget.dart';
 import 'package:e_commerce_app/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:e_commerce_app/features/shop/screens/checkout/widgets/billing_payment_section.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
@@ -38,17 +39,26 @@ class CheckoutScreen extends StatelessWidget {
             /// -- Coupon TextField
             const ECouponCode(),
 
+            const SizedBox(height: ESizes.spaceBtwSections,),
+
             /// -- Billing Section
             ERoundedContainer(
+              padding: const EdgeInsets.all(ESizes.md),
               showBorder: true,
               backgroundColor: dark ? EColors.black : EColors.white,
-              child: Column(
+              child: const Column(
                 children: [
                   /// Pricing
-                   
+                  EBillingPaymentSection(),
+                  SizedBox(height: ESizes.spaceBtwItems,),
+
                   /// Divider
-                  
+                  Divider(),
+                  SizedBox(height: ESizes.spaceBtwItems,),
+
                   /// Payment Methods
+                  SizedBox(height: ESizes.spaceBtwItems,),
+                  
                   
                   /// Address
                 ],
