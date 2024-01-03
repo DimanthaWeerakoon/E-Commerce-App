@@ -1,4 +1,9 @@
+import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
+import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
+import 'package:e_commerce_app/utils/constants/colors.dart';
+import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
+import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class EBillingPaymentSection extends StatelessWidget {
@@ -6,43 +11,28 @@ class EBillingPaymentSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
     return Column(
       children: [
-        /// SubTotal
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Subtotal', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$266.0', style: Theme.of(context).textTheme.bodyMedium,),
-          ],
+        ESectionHeading(
+          title: 'Payment Methods',
+          buttonTitle: 'Change',
+          onPressed: () {},
         ),
         const SizedBox(height: ESizes.spaceBtwItems / 2,),
-        /// Shipping Fee
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Shipping Fee', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$6.0', style: Theme.of(context).textTheme.bodyMedium,),
+            ERoundedContainer(
+              width: 60,
+              height: 35,
+              backgroundColor: dark? EColors.light : EColors.white,
+              padding: const EdgeInsets.all(ESizes.sm),
+              child: const Image(image: AssetImage(EImages.paypal)),
+            ), 
+            const SizedBox(width: ESizes.spaceBtwItems / 2,),
+            Text('Paypal', style: Theme.of(context).textTheme.bodyLarge,)
           ],
-        ),
-        const SizedBox(height: ESizes.spaceBtwItems / 2,),
-        /// Tax Fee
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Tax Fee', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$25.0', style: Theme.of(context).textTheme.bodyMedium,),
-          ],
-        ),
-        const SizedBox(height: ESizes.spaceBtwItems / 2,),
-        /// Order Total
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Order Total', style: Theme.of(context).textTheme.bodyMedium,),
-            Text('\$297.0', style: Theme.of(context).textTheme.titleMedium,),
-          ],
-        ),
+        )
       ],
     );
   }

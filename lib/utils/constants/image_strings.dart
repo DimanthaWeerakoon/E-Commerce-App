@@ -74,4 +74,13 @@ class EImages {
 
   // -- Brand Logos
   static const String nikeLogo = "assets/logos/brands/nike_logo.png";
+  
+  
+  // -- Payment Method Logos
+  static const String paypal = "assets/images/payment_methods/paypal.png";
+  static const String visa = "assets/images/payment_methods/visa.png";
+  static const String masterCard = "assets/images/payment_methods/master_card.png";
+  static const String payoneer = "assets/images/payment_methods/payoneer.png";
+  static const String applePay = "assets/images/payment_methods/apple_pay.png";
+  static const String paymentSuccessful = "assets/images/payment_methods/payment_successful.gif";
 }

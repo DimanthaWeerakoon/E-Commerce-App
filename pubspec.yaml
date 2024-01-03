@@ -58,6 +58,7 @@ flutter:
     - assets/logos/brands/
     - assets/icons/
     - assets/images/
+    - assets/images/payment_methods/
     - assets/images/banners/
     - assets/images/products/
     - assets/images/on_boarding_images/
