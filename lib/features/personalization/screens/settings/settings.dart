@@ -37,7 +37,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
                 // -- User Profile Card
                 EUserProfileTile(
-                  image: EImages.userImage,
+                  image: EImages.userImage1,
                   title: 'D-Alpha',
                   subTitle: 'support@dalpha.com',
                   onPressed: () => Get.to(const ProfileScreen()),
