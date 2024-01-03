@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/theme/custom_themes/app_bar_theme.dart';
 import 'package:e_commerce_app/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:e_commerce_app/utils/theme/custom_themes/checkbox_theme.dart';
@@ -34,7 +35,7 @@ class EAppTheme {
     primaryColor: Colors.blue,
     textTheme: ETextTheme.darkTextTheme,
     chipTheme: EChipTheme.darkChipTheme,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: EColors.dark,
     appBarTheme: EAppBarTheme.darkAppBarTheme,
     checkboxTheme: ECheckBoxTheme.darkChechBoxTheme,
     bottomSheetTheme: EBottomSheetTheme.darkBottomSheetTheme,
