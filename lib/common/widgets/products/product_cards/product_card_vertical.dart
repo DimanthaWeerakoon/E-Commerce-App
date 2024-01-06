@@ -57,7 +57,7 @@ class EProductCardVertical extends StatelessWidget {
                             .textTheme
                             .labelLarge!
                             .apply(color: EColors.black),
-                      ),
+                      ),    
                     ),
 
                     // -- Favourite Icon Button
