@@ -111,7 +111,7 @@ class EProductCardVertical extends StatelessWidget {
                       color: EColors.dark,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(ESizes.cardRadiusMd),
-                          bottomLeft:
+                          bottomRight:
                               Radius.circular(ESizes.productImageRadius))),
                   child: const SizedBox(
                       width: ESizes.iconLg * 1.2,

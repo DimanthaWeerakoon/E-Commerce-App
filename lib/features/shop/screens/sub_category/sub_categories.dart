@@ -27,15 +27,30 @@ class SubCategoriesScreen extends StatelessWidget {
                 width: double.infinity,
                 applyImageRadius: true,
               ),
-              const SizedBox(height: ESizes.spaceBtwSections,),
+              const SizedBox(
+                height: ESizes.spaceBtwSections,
+              ),
 
               /// Sub-Categories
               Column(
                 children: [
                   /// Heading
-                  ESectionHeading(title: 'Sport shoes', onPressed: () {},),
+                  ESectionHeading(
+                    title: 'Sport shoes',
+                    onPressed: () {},
+                  ),
                   const SizedBox(height: ESizes.spaceBtwItems / 2),
-                  const EProductCardHorizontal()
+                  SizedBox(
+                    height: 120,
+                    child: ListView.separated(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 4,
+                        separatorBuilder: (context, index) => const SizedBox(
+                              width: ESizes.spaceBtwItems,
+                            ),
+                        itemBuilder: (context, index) =>
+                            const EProductCardHorizontal()),
+                  )
                 ],
               )
             ],

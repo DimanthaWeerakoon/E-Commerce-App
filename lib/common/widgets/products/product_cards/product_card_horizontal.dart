@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/common/styles/shadows.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/icons/circular_icon.dart';
 import 'package:e_commerce_app/common/widgets/images/rounded_image.dart';
@@ -22,9 +21,9 @@ class EProductCardHorizontal extends StatelessWidget {
       width: 310,
       padding: const EdgeInsets.all(1),
       decoration: BoxDecoration(
-          boxShadow: [EShadowStyle.verticalProductShadow],
+          // boxShadow: [EShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(ESizes.productImageRadius),
-          color: dark ? EColors.darkerGrey : EColors.white),
+          color: dark ? EColors.darkerGrey : EColors.softGrey),
       child: Row(
         children: [
           // Thumbnail
@@ -72,13 +71,13 @@ class EProductCardHorizontal extends StatelessWidget {
           ),
 
           // Details
-          const SizedBox(
+          SizedBox(
             width: 172,
             child: Padding(
-              padding: EdgeInsets.only(top: ESizes.sm, left: ESizes.sm),
+              padding: const EdgeInsets.only(top: ESizes.sm, left: ESizes.sm),
               child: Column(
                 children: [
-                  Column(
+                  const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         EProductTitleText(
@@ -91,10 +90,32 @@ class EProductCardHorizontal extends StatelessWidget {
                         ),
                         EBrabdTitleTextWithVerifiedIcon(title: 'Nike')
                       ]),
+                      const SizedBox(height: 30,),
+                  const Spacer(),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      EProductPriceText(price: '266.0')
+                      /// Pricing
+                      const Flexible(child: EProductPriceText(price: '266.0')),
+
+                      /// Add to cart
+                      Container(
+                        decoration: const BoxDecoration(
+                            color: EColors.dark,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(ESizes.cardRadiusMd),
+                                bottomRight: Radius.circular(ESizes.cardRadiusLg)
+                                )),
+                        child: const SizedBox(
+                            width: ESizes.iconLg * 1.2,
+                            height: ESizes.iconLg * 1.2,
+                            child: Center(
+                                child: Icon(
+                              Iconsax.add,
+                              color: EColors.white,
+                            ))),
+                      )
                     ],
                   )
                 ],
