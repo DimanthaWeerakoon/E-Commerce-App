@@ -26,7 +26,7 @@ class EProductCardVertical extends StatelessWidget {
         width: 180,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
-            boxShadow: [EShadowStyle.verticalProductShadow],
+            // boxShadow: [EShadowStyle.verticalP =>roductShadow],
             borderRadius: BorderRadius.circular(ESizes.productImageRadius),
             color: dark ? EColors.darkerGrey : EColors.white),
         child: Column(
