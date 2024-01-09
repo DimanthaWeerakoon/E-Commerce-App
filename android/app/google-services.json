@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "327321067669",
+    "project_id": "ecommerce-app-ff5f5",
+    "storage_bucket": "ecommerce-app-ff5f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327321067669:android:8e6839a09289da990cfb9c",
+        "android_client_info": {
+          "package_name": "commerce.dimantha.e_commerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwMQxJW_A0eFnmCKhZhl3t2sjTqCbKCCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
