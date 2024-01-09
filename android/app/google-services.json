@@ -12,7 +12,20 @@
           "package_name": "commerce.dimantha.e_commerce_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "327321067669-pre1iviir0kkos8v2027rfa1oj0co6e1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "commerce.dimantha.e_commerce_app",
+            "certificate_hash": "4e8e9bda6dba0111a767f9e58dc0a2af8fd2ddcd"
+          }
+        },
+        {
+          "client_id": "327321067669-igoup7ufcurikr8q7iga9oitn003atq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDwMQxJW_A0eFnmCKhZhl3t2sjTqCbKCCE"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327321067669-igoup7ufcurikr8q7iga9oitn003atq3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "327321067669-0v2hov1g9qvnod56eth1j4n1ulb91dp1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "commerce.dimantha.eCommerceApp"
+              }
+            }
+          ]
         }
       }
     }

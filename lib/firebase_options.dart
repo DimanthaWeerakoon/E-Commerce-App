@@ -70,6 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '327321067669',
     projectId: 'ecommerce-app-ff5f5',
     storageBucket: 'ecommerce-app-ff5f5.appspot.com',
+    androidClientId: '327321067669-pre1iviir0kkos8v2027rfa1oj0co6e1.apps.googleusercontent.com',
+    iosClientId: '327321067669-0v2hov1g9qvnod56eth1j4n1ulb91dp1.apps.googleusercontent.com',
     iosBundleId: 'commerce.dimantha.eCommerceApp',
   );
 }
