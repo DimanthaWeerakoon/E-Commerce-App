@@ -29,7 +29,7 @@ dependencies:
 
 # State Management
   get: 
-  get_storage:
+  get_storage: ^2.1.1
 
 
 # Product Specific
