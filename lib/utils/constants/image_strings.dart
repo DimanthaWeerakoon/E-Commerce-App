@@ -83,4 +83,7 @@ class EImages {
   static const String payoneer = "assets/images/payment_methods/payoneer.png";
   static const String applePay = "assets/images/payment_methods/apple_pay.png";
   static const String paymentSuccessful = "assets/images/payment_methods/payment_successful.gif";
+
+  // -- Animations 
+  static const String docerAnimation = "assets/images/urban-line-parachutist-line.gif";
 }

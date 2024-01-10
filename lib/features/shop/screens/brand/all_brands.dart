@@ -1,7 +1,6 @@
 import 'package:e_commerce_app/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce_app/common/widgets/brands/brand_card.dart';
 import 'package:e_commerce_app/common/widgets/layouts/grid_layout.dart';
-import 'package:e_commerce_app/common/widgets/products/sortable/sortable_product.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce_app/features/shop/screens/brand/brand_products.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';

@@ -28,7 +28,7 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: ESizes.spaceBtwSections),
 
               /// Form
-              ESignUpForm(txtTheme: txtTheme)
+              const ESignUpForm()
             ],
           ),
         ),
