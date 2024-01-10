@@ -5,7 +5,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
- class AuthenticationRepository extends GetxController {
+class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
 
   // Variables
@@ -22,11 +22,14 @@ import 'package:get_storage/get_storage.dart';
   screenRedirect() async {
     // Local storage
     if (kDebugMode) {
-      print('===================================GET STORAGE Auth Repo==================================');
+      print(
+          '===================================GET STORAGE Auth Repo==================================');
       print(deviceStorage.read('IsFirstTime'));
     }
 
     deviceStorage.writeIfNull('IsFirstTime', true);
-    deviceStorage.read('IsFirstTime') != true ? Get.offAll(() => const LoginScreen()) : Get.offAll(() => const OnBoardingScreen());
+    deviceStorage.read('IsFirstTime') != true
+        ? Get.offAll(() => const LoginScreen())
+        : Get.offAll(() => const OnBoardingScreen());
   }
- }
+}

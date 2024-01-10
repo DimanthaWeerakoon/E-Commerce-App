@@ -17,22 +17,30 @@ class SignupController extends GetxController {
   final username = TextEditingController();
   final password = TextEditingController();
   final phoneNumber = TextEditingController();
-  GlobalKey<FormState> signupFormKey = GlobalKey<FormState>(); // Form key for form validation
-  
+  GlobalKey<FormState> signupFormKey =
+      GlobalKey<FormState>(); // Form key for form validation
 
   ///  -- SIGNUP
-  Future <void> signup() async {
+  Future<void> signup() async {
     try {
       // Start Loading
-      EFullScreenLoader.openLoadingDialog("We are processing your information", EImages.docerAnimation);
+      EFullScreenLoader.openLoadingDialog(
+          "We are processing your information", EImages.docerAnimation);
       // Check Internet Connectitvity
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) return;
-      
+
       // Form Validation
-      if(signupFormKey.currentState!.validate()) return;
+      if (signupFormKey.currentState!.validate()) return;
 
       // Privacy Policy Check
+      if (!privacyPolicy.value) {
+        ELoaders.warningSnackBar(
+            title: 'Accept Privacy Policy',
+            message:
+                'In order to create the account you must read and accept the Privacy Policy & Terms of Use');
+        return;
+      }
 
       // Register user in the Firebase Authentication  Save user data in the Firebase
 
@@ -42,10 +50,10 @@ class SignupController extends GetxController {
 
       // Move to Verify Email Screen
     } catch (e) {
-      // Show some Generic Error to the user 
+      // Show some Generic Error to the user
       ELoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     } finally {
-      // Remove Loader 
+      // Remove Loader
       EFullScreenLoader.stopLoading();
     }
   }
