@@ -9,6 +9,8 @@ class SignupController extends GetxController {
   static SignupController get instance => Get.find();
 
   /// Variables
+  final hidePassword = true.obs;
+  final privacyPolicy = true.obs;
   final email = TextEditingController();
   final firstName = TextEditingController();
   final lastName = TextEditingController();
@@ -25,15 +27,11 @@ class SignupController extends GetxController {
       EFullScreenLoader.openLoadingDialog("We are processing your information", EImages.docerAnimation);
       // Check Internet Connectitvity
       final isConnected = await NetworkManager.instance.isConnected();
-      if (!isConnected) {
-        EFullScreenLoader.stopLoading();
-        return;
-      }
+      if (!isConnected) return;
+      
       // Form Validation
-      if(signupFormKey.currentState!.validate()){
-        EFullScreenLoader.stopLoading();
-        return;
-      }
+      if(signupFormKey.currentState!.validate()) return;
+
       // Privacy Policy Check
 
       // Register user in the Firebase Authentication  Save user data in the Firebase

@@ -91,14 +91,18 @@ class ESignUpForm extends StatelessWidget {
             ),
 
             /// Phone Number
-            TextFormField(
-              obscureText: true,
-              controller: controller.password,
-              validator: (value) => EValidator.validatePassword(value),
-              decoration: const InputDecoration(
-                  labelText: ETexts.password,
-                  prefixIcon: Icon(Iconsax.password_check),
-                  suffixIcon: Icon(Iconsax.eye_slash)),
+            Obx(
+              () => TextFormField(
+                obscureText: controller.hidePassword.value,
+                controller: controller.password,
+                validator: (value) => EValidator.validatePassword(value),
+                decoration: InputDecoration(
+                    labelText: ETexts.password,
+                    prefixIcon: const Icon(Iconsax.password_check),
+                    suffixIcon: IconButton(
+                      onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                      icon: Icon(controller.hidePassword.value ?  Iconsax.eye_slash : Iconsax.eye))),
+              ),
             ),
 
             const SizedBox(
@@ -106,7 +110,7 @@ class ESignUpForm extends StatelessWidget {
             ),
 
             /// Terms & Conditions CheckBox
-            ETermsandConditionsCheckBox(txtTheme: txtTheme),
+            const ETermsandConditionsCheckBox(),
             const SizedBox(
               height: ESizes.spaceBtwItems,
             ),
