@@ -19,14 +19,16 @@ class EFullScreenLoader {
                   : EColors.white,
               width: double.infinity,
               height: double.infinity,
-              child: Column(
-                children: [
-                  const SizedBox(
-                    height: 250,
-                  ),
-                  EAnimationLoaderWidget(text: text, animation: animation),
-                ],
-              ),
+              child: ListView(children: [
+                Column(
+                  children: [
+                    const SizedBox(
+                      height: 250,
+                    ),
+                    EAnimationLoaderWidget(text: text, animation: animation),
+                  ],
+                ),
+              ]),
             )));
   }
 

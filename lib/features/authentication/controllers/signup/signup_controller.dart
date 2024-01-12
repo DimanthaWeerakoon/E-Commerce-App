@@ -30,6 +30,7 @@ class SignupController extends GetxController {
       // Start Loading
       EFullScreenLoader.openLoadingDialog(
           "We are processing your information", EImages.docerAnimation);
+
       // Check Internet Connectitvity
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) {
@@ -60,7 +61,7 @@ class SignupController extends GetxController {
               email.text.trim(), password.text.trim());
 
       // Save Authenticated user data in the Firebase Firestore
-      final newUser = UserModel(
+      final user = UserModel(
           id: userCredential.user!.uid,
           firstName: firstName.text.trim(),
           lastName: lastName.text.trim(),
@@ -70,7 +71,7 @@ class SignupController extends GetxController {
           profilePicture: '');
 
       final userRepository = Get.put(UserRepository());
-      await userRepository.saveUserRecord(newUser);
+      await userRepository.saveUserRecord(user);
 
       // Remove Loader
       EFullScreenLoader.stopLoading();
