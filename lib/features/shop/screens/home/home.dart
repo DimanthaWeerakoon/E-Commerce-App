@@ -77,6 +77,8 @@ class HomeScreen extends StatelessWidget {
                     EImages.promoBanner1,
                     EImages.promoBanner2,
                     EImages.promoBanner3,
+                    EImages.promoBanner2,
+                    EImages.promoBanner3,
                   ]),
                   const SizedBox(height: ESizes.spaceBtwSections),
 
